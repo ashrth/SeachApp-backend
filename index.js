@@ -2,7 +2,7 @@ const express = require("express");
 require("./database/config");
 
 const cors = require("cors");
-const Ad = require("./database/Ad");
+const Ad = require("./models/Ad");
 const app = express();
 app.use(cors());
 
