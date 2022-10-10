@@ -25,11 +25,9 @@ app.get("/ads/:key", async (req, resp) => {
       name: { $regex: req.params.key }
   },
   {
-      company: { $regex: req.params.key }
-  },
-  {
-      category: { $regex: req.params.key }
+      headline: { $regex: req.params.key }
   }
+  
 ]
   });
   
