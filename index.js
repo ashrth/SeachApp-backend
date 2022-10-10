@@ -5,7 +5,7 @@ const Ad = require("./database/Ad");
 const app = express();
 app.use(express.json());
 
-app.get("/:key", async (req, resp) => {
+app.get("/ads/:key", async (req, resp) => {
   let ads = await Ad.find({
     "$or": [
       {
