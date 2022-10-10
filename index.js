@@ -1,8 +1,10 @@
 const express = require("express");
 require("./database/config");
+const cors = require("cors");
 const Ad = require("./database/Ad");
-
 const app = express();
+app.use(cors());
+
 app.use(express.json());
 
 app.get("/ads/:key", async (req, resp) => {
@@ -28,6 +30,8 @@ app.get("/ads/:key", async (req, resp) => {
     resp.send("No Product Found");
   }
 });
+
+
 
 app.listen(5000);
 
