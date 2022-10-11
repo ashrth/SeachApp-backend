@@ -20,7 +20,7 @@ app.get("/ads", async (req, resp) => {
 
 app.get("/ads/:key", async (req, resp) => {
   let ads = await Ad.find({
-    "$or": [
+    $elemMatch: [
   {
       name: { $regex: req.params.key }
   },
